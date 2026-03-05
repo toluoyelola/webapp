@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        </div>
+        <div>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        </div>
+        <div>
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+            <option value="inquiry">Inquiry</option>
+            <option value="refund">Request for Refund</option>
+            <option value="complaint">Complaint About Service</option>
+        </select>
+        </div>
+        <div>
+        <label for="message">Message</label>
+        <textarea id="message" rows="20" cols="50"></textarea>
+        </div>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
