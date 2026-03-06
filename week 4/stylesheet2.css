@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+#div1 {
+    align-items: center;
+    background-color: rgb(151, 78, 89);
+}
+
+.menu {
+    float: left;
+    width: 20%;
+    background-color: rgb(241, 224, 233);
+}
+.menuitem {
+    padding: 5px;
+    margin-top: 5px;
+    border-bottom: 2px solid rgb(51, 38, 38);
+}
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: rgb(228, 190, 210);
+}
+.right{
+    float: left;
+    width: 20%;
+    padding: 0 15px;
+    background-color: rgb(226, 176, 203);
+}
+
+@media only screen and (max-width:800px) {
+    .main {
+        width: 80%;
+    }
+    .right {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:500px) {
+            .menu, .main, .right {
+        width: 100%
+    }
+}
