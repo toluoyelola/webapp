@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Responsive Dashboard</title>
+</head>
+<body class="bg-gray-100 flex flex-col md:flex-row h-screen">
+
+    <nav class="bg-indigo-900 text-white fixed bottom-0 w-full flex flex-row justify-around p-4 shadow-lg z-50 
+                md:relative md:w-64 md:flex-col md:justify-start md:h-screen md:p-6 md:shadow-none">
+        
+        <div class="hidden md:block text-2xl font-bold mb-10 tracking-wider text-center">
+            DASHBOARD
+        </div>
+
+        <a href="#" class="block px-4 py-2 rounded md:mb-2 hover:bg-indigo-700 transition">🏠 Home</a>
+        <a href="#" class="block px-4 py-2 rounded md:mb-2 hover:bg-indigo-700 transition">📊 Analytics</a>
+        <a href="#" class="block px-4 py-2 rounded md:mb-2 hover:bg-indigo-700 transition">⚙️ Settings</a>
+        <a href="#" class="block px-4 py-2 rounded md:mb-2 hover:bg-indigo-700 transition">👤 Profile</a>
+    </nav>
+
+    <main class="flex-1 p-8 overflow-y-auto pb-24 md:pb-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Welcome back!</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <p class="text-gray-600">This is the main content area. Notice how the navigation adapts depending on your screen size. Shrink your browser window to see the sidebar drop to the bottom!</p>
+        </div>
+    </main>
+
+</body>
+</html>
