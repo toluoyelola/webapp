@@ -1,16 +1,60 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from './assets/vite.svg'
+//import heroImg from './assets/hero.png'
 import './App.css'
 import React from 'react'
 import ProfileCard from './ProfileCard'
-
-
+import AddMemberForm from './AddMemberForm';
+import UserDirectory from './UserDirectory';
 
 
 function App() {
+  const [teamMembers, setTeamMembers] = useState([
+    { id: 1, name: 'Alice Johnson', bio: 'Frontend Engineer', imageUrl: 'https://via.placeholder.com/100' },
+    { id: 2, name: 'Bob Smith', bio: 'Backend Developer', imageUrl: 'https://via.placeholder.com/100' },
+    { id: 3, name: 'Charlie Davis', bio: 'UI/UX Designer', imageUrl: 'https://via.placeholder.com/100' },
+    { id: 4, name: 'Dana Lee', bio: 'Product Manager', imageUrl: 'https://via.placeholder.com/100' }
+  ]);
+
+  const handleAddMember = (newMember) => {
+    setTeamMembers([...teamMembers, newMember]);
+  };
+
+  return (
+    <div style={{ fontFamily: 'Arial', padding: '20px' }}>
+      <h1>My React App</h1>
+      
+    
+      <AddMemberForm onAddMember={handleAddMember} />
+
+      <h2>Team Members</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        
+        {teamMembers.map(member => (
+          <ProfileCard
+            key={member.id} 
+            name={member.name}
+            bio={member.bio}
+            imageUrl={member.imageUrl}
+          />
+        ))}
+      </div>
+
+      <hr style={{ margin: '40px 0' }}/>
+      
+      <UserDirectory />
+    </div>
+  );
+}
+
+export default App;
+
+
+/*function App() {
   const [count, setCount] = useState(0)
+
+  
 
   return (
     <>
@@ -148,4 +192,4 @@ function App() {
   )
 }
 
-export default App
+export default App;*/
